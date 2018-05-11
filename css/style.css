@@ -49,6 +49,7 @@ img {
 .title {
   font-size: 2em;
   font-weight: normal;
+  margin: 0px;
 }
 
 
@@ -101,7 +102,12 @@ h3 {
 
 .portfolio {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.photo {
+  width: 100%;
 }
 
 .banner {
@@ -109,7 +115,7 @@ h3 {
   padding-top: 25px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 650px) {
   .main-header {
     display: flex;
     flex-direction: column;
@@ -120,13 +126,8 @@ h3 {
     font-size: 3.8em;
   }
 	
-  .portfolio,
   .photo {
-    display: flex;
-  }
-	
-  .photo {
-    flex-direction: column;
+    max-width: calc(50% - 50px); 
   }
 	
   .portfolio>div {
@@ -142,16 +143,14 @@ h3 {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 950px) {
   .main-header {
     flex-direction: row;
     justify-content: space-between;
   }
-	
-  .portfolio {
-    flex-direction: row;
+	.photo {
+    max-width: calc(33% - 20px); 
   }
-	
   .wrap {
     max-width: 90%;
     margin-left: auto;
